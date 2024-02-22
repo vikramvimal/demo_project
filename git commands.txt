@@ -1,0 +1,27 @@
+## GITHUB
+git init #Initialize a Git repository
+git clone <repository_url> #Clone a repository
+git add <file1> <file2>  #Add files to the staging area
+git commit -m "commit message"  #Commit changes
+git push origin <branch name> #Push changes to a remote repository
+git pull origin <branch name> #Pull changes from a remote repository
+git status #Check the status of the repository
+git log #View commit history
+git branch <branch_name> #create a new brance name
+git checkout -b <branch name> #create + switch to new branch
+git checkout <branch name> #Switch to a different branch
+git merge <branch_name> #Merge branches
+git checkout -- <file> #Discard changes in the working directory
+git config --global user.name "Your Name" #Configure user information
+git config --global user.email "youremail@example.com" #Configure user information
+git diff #View the differences between files
+git reset HEAD <file>  #Remove files from the staging area
+git checkout -- <file> #Discard changes in the working directory
+git mv #Move or rename a file, a directory, or a symlink
+
+11. git stash 
+12. git stash clear
+13. git stash apply
+14. git branch
+15. git fetch
+
