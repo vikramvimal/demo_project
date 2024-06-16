@@ -1,0 +1,24 @@
+import boto3
+import time
+s3 = boto3.resource('s3')
+
+from boto3.s3.transfer import TransferConfig
+config = TransferConfig(multipart_threshold=1024*1,
+                        multipart_chunksize=1024*1,
+                        use_threads=True)
+file_name=""
+bucket_name= 'vikram1993'
+def multipart_upload_boto3():
+    begin = time.time()
+
+    file_path = f'C:\\User\\vikrt\\Downloads\\{file_name}'
+    key = ' from boto3.pptx'
+
+    s3.Object(bucket_name, key).upload_file(file_path,
+                                            config=config,
+                                            Callback=None)
+    end = time.time()
+    print ('upload successfull !!!')
+    print(f"Time taken for upload: {end - begin}")
+
+multipart_upload_boto3()
